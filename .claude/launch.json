@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "buffalo-lawn-care",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--", "--port", "4200", "--strictPort"],
+      "port": 4200,
+      "autoPort": false
+    }
+  ]
+}

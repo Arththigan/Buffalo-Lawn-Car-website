@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Archivo:wght@600;700;800;900&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Manrope', system-ui, sans-serif;
+  --font-display: 'Archivo', system-ui, sans-serif;
+  --color-brand-50: #eef8ec;
+  --color-brand-100: #d7edd1;
+  --color-brand-200: #b1dba5;
+  --color-brand-300: #85c473;
+  --color-brand-400: #5aa947;
+  --color-brand-500: #3f8c2f;
+  --color-brand-600: #2f6b3a;
+  --color-brand-700: #275733;
+  --color-brand-800: #21462b;
+  --color-brand-900: #1a3722;
+  --color-cream: #f8f6ee;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-cream);
+  color: var(--color-brand-900);
+}
+
+.legal-copy {
+  color: color-mix(in srgb, var(--color-brand-800) 82%, transparent);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.legal-copy h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-brand-900);
+}
+
+.legal-copy h3 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.35rem;
+  font-weight: 800;
+  color: var(--color-brand-800);
+}
+
+.legal-copy ul {
+  margin: 0.75rem 0;
+  padding-left: 1.4rem;
+  list-style: disc;
+}
+
+.legal-copy li + li { margin-top: 0.3rem; }
+.legal-copy a { color: var(--color-brand-600); font-weight: 700; text-decoration: underline; }
+.legal-copy strong { color: var(--color-brand-900); }

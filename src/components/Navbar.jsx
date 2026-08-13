@@ -1,0 +1,89 @@
+import { useState } from 'react'
+import { site } from '../data/site'
+import { IconLeaf, IconMenu, IconClose, IconPhone } from './icons'
+
+const links = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '#services' },
+  { label: 'Gallery', href: '#gallery' },
+  { label: 'Reviews', href: '#reviews' },
+  { label: 'FAQ', href: '#faq' },
+  { label: 'Contact', href: '#contact' },
+]
+
+export default function Navbar() {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <header className="relative z-20">
+      <div className="flex items-center justify-between gap-4 px-5 py-4 sm:px-8 sm:py-5">
+        <a href="/" className="flex items-center gap-2.5 shrink-0">
+          <span className="grid h-9 w-9 place-items-center rounded-full bg-brand-600 text-cream">
+            <IconLeaf className="h-5 w-5" />
+          </span>
+          <span className="font-display text-[15px] font-extrabold tracking-[0.12em] text-brand-900 sm:text-base">
+            BUFFALO LAWN CARE
+          </span>
+        </a>
+
+        <nav className="hidden items-center gap-8 lg:flex">
+          {links.map((l) => (
+            <a
+              key={l.label}
+              href={l.href}
+              className="text-sm font-semibold text-brand-800/80 transition hover:text-brand-900"
+            >
+              {l.label}
+            </a>
+          ))}
+        </nav>
+
+        <p className="hidden max-w-[240px] text-center text-xs font-bold tracking-wide text-brand-700 xl:block">
+          GET 15% OFF YOUR FIRST SERVICE
+        </p>
+
+        <div className="flex items-center gap-2.5 sm:gap-3">
+          <a
+            href={site.phoneHref}
+            className="hidden items-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-bold text-brand-900 shadow-sm ring-1 ring-brand-900/10 transition hover:ring-brand-900/20 sm:flex"
+          >
+            <IconPhone className="h-4 w-4 text-brand-600" />
+            {site.phoneDisplay}
+          </a>
+          <button
+            type="button"
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            onClick={() => setOpen((v) => !v)}
+            className="grid h-10 w-10 place-items-center rounded-full bg-white text-brand-900 shadow-sm ring-1 ring-brand-900/10 lg:hidden"
+          >
+            {open ? <IconClose className="h-5 w-5" /> : <IconMenu className="h-5 w-5" />}
+          </button>
+        </div>
+      </div>
+
+      {open && (
+        <div className="mx-5 mb-4 rounded-2xl bg-white p-4 shadow-lg ring-1 ring-brand-900/10 lg:hidden">
+          <nav className="flex flex-col gap-1">
+            {links.map((l) => (
+              <a
+                key={l.label}
+                href={l.href}
+                onClick={() => setOpen(false)}
+                className="rounded-xl px-3 py-2.5 text-sm font-semibold text-brand-900 hover:bg-brand-50"
+              >
+                {l.label}
+              </a>
+            ))}
+            <a
+              href={site.phoneHref}
+              className="mt-1 flex items-center gap-2 rounded-xl bg-brand-600 px-3 py-2.5 text-sm font-bold text-white"
+            >
+              <IconPhone className="h-4 w-4" />
+              Call {site.phoneDisplay}
+            </a>
+          </nav>
+        </div>
+      )}
+    </header>
+  )
+}
