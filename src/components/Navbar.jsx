@@ -15,8 +15,9 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="relative z-20">
-      <div className="flex items-center justify-between gap-4 px-5 py-4 sm:px-8 sm:py-5">
+    <>
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-brand-900/10 bg-cream/95 shadow-sm backdrop-blur-md">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8 sm:py-5">
         <a href="/" className="flex items-center gap-2.5 shrink-0">
           <span className="grid h-9 w-9 place-items-center rounded-full bg-brand-600 text-cream">
             <IconLeaf className="h-5 w-5" />
@@ -62,7 +63,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="mx-5 mb-4 rounded-2xl bg-white p-4 shadow-lg ring-1 ring-brand-900/10 lg:hidden">
+        <div className="mx-auto mb-4 max-w-7xl rounded-2xl bg-white p-4 shadow-lg ring-1 ring-brand-900/10 lg:hidden sm:mx-8">
           <nav className="flex flex-col gap-1">
             {links.map((l) => (
               <a
@@ -85,5 +86,7 @@ export default function Navbar() {
         </div>
       )}
     </header>
+    <div className="h-[72px] sm:h-[80px]" aria-hidden="true" />
+    </>
   )
 }
