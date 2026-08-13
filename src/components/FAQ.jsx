@@ -4,7 +4,7 @@ import { IconArrow } from './icons'
 const faqs = [
   {
     q: 'How much does lawn care cost?',
-    a: 'Most properties fall between $45 per visit and $220 per month depending on lawn size and the plan you choose. We confirm an exact flat-rate quote before your first visit — no surprises.',
+    a: 'Pricing depends on your lawn size, service frequency, and selected services. We provide a clear custom quote before your first visit — no surprises.',
   },
   {
     q: 'Do I need to sign a contract?',

@@ -39,10 +39,6 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <p className="hidden max-w-[240px] text-center text-xs font-bold tracking-wide text-brand-700 xl:block">
-          GET 15% OFF YOUR FIRST SERVICE
-        </p>
-
         <div className="flex items-center gap-2.5 sm:gap-3">
           <a
             href={site.phoneHref}

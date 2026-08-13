@@ -129,9 +129,9 @@ export default function Hero() {
               </h2>
               <div className="mt-1 flex items-end justify-between">
                 <p className="text-sm font-medium text-brand-800/80">Weekly &middot; Front &amp; back yard</p>
-                <p className="text-lg font-extrabold text-brand-900">
-                  $120<span className="text-sm font-semibold text-brand-800/75">/mo</span>
-                </p>
+                <a href="#contact" className="text-sm font-extrabold text-brand-700 hover:text-brand-900">
+                  Request a quote
+                </a>
               </div>
             </div>
           </div>
