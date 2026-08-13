@@ -1,19 +1,41 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { site } from '../data/site'
 import { IconMenu, IconClose, IconPhone } from './icons'
 import BrandLogo from './BrandLogo'
 
 const links = [
-  { label: 'Home', href: '/' },
-  { label: 'Services', href: '#services' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Reviews', href: '#reviews' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '#top', section: 'top' },
+  { label: 'Services', href: '#services', section: 'services' },
+  { label: 'Gallery', href: '#gallery', section: 'gallery' },
+  { label: 'Reviews', href: '#reviews', section: 'reviews' },
+  { label: 'FAQ', href: '#faq', section: 'faq' },
+  { label: 'Contact', href: '#contact', section: 'contact' },
 ]
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const [active, setActive] = useState('top')
+
+  useEffect(() => {
+    const updateActiveSection = () => {
+      const marker = window.scrollY + 150
+      let current = 'top'
+
+      for (const link of links) {
+        const section = document.getElementById(link.section)
+        if (section && section.offsetTop <= marker) current = link.section
+      }
+
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 8) {
+        current = 'contact'
+      }
+      setActive(current)
+    }
+
+    updateActiveSection()
+    window.addEventListener('scroll', updateActiveSection, { passive: true })
+    return () => window.removeEventListener('scroll', updateActiveSection)
+  }, [])
 
   return (
     <>
@@ -28,7 +50,12 @@ export default function Navbar() {
             <a
               key={l.label}
               href={l.href}
-              className="text-sm font-semibold text-brand-800/80 transition hover:text-brand-900"
+              aria-current={active === l.section ? 'page' : undefined}
+              className={`rounded-full px-3 py-2 text-sm font-semibold transition ${
+                active === l.section
+                  ? 'bg-brand-600 text-white shadow-sm'
+                  : 'text-brand-800/80 hover:bg-brand-50 hover:text-brand-900'
+              }`}
             >
               {l.label}
             </a>
@@ -62,7 +89,12 @@ export default function Navbar() {
                 key={l.label}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-3 py-2.5 text-sm font-semibold text-brand-900 hover:bg-brand-50"
+                aria-current={active === l.section ? 'page' : undefined}
+                className={`rounded-xl px-3 py-2.5 text-sm font-semibold transition ${
+                  active === l.section
+                    ? 'bg-brand-600 text-white'
+                    : 'text-brand-900 hover:bg-brand-50'
+                }`}
               >
                 {l.label}
               </a>
