@@ -1,21 +1,21 @@
 const photos = [
   {
-    src: 'https://images.unsplash.com/photo-1625766924125-7b2ad2b4e3c2?q=65&w=700&auto=format&fit=crop&fm=webp',
+    src: 'https://images.unsplash.com/photo-1625766924125-7b2ad2b4e3c2?q=50&w=600&auto=format&fit=crop&fm=avif',
     caption: 'Striped precision mowing',
     span: 'lg:row-span-2',
   },
   {
-    src: 'https://images.unsplash.com/photo-1642541744624-7a2a89545a32?q=65&w=700&auto=format&fit=crop&fm=webp',
+    src: 'https://images.unsplash.com/photo-1642541744624-7a2a89545a32?q=50&w=600&auto=format&fit=crop&fm=avif',
     caption: 'Hedge trimming & edging',
     span: '',
   },
   {
-    src: 'https://images.unsplash.com/photo-1645693228140-a90b27b6be51?q=65&w=700&auto=format&fit=crop&fm=webp',
+    src: 'https://images.unsplash.com/photo-1645693228140-a90b27b6be51?q=50&w=600&auto=format&fit=crop&fm=avif',
     caption: 'Healthy, dew-fresh turf',
     span: '',
   },
   {
-    src: 'https://images.unsplash.com/photo-1641570599342-36953beede98?q=65&w=700&auto=format&fit=crop&fm=webp',
+    src: 'https://images.unsplash.com/photo-1641570599342-36953beede98?q=50&w=600&auto=format&fit=crop&fm=avif',
     caption: 'Spacious yard maintenance',
     span: 'sm:col-span-2',
   },

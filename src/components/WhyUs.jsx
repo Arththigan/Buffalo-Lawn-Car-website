@@ -14,7 +14,7 @@ const stats = [
 ]
 
 const IMG =
-  'https://images.unsplash.com/photo-1558904541-efa843a96f01?q=65&w=800&auto=format&fit=crop&fm=webp'
+  'https://images.unsplash.com/photo-1558904541-efa843a96f01?q=50&w=700&auto=format&fit=crop&fm=avif'
 
 export default function WhyUs() {
   return (

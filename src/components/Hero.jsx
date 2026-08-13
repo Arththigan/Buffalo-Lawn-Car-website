@@ -2,11 +2,11 @@ import Navbar from './Navbar'
 import { IconArrow, IconCalendar, IconFilter, IconRuler, IconSparkle, IconStar } from './icons'
 
 const HERO_IMG =
-  '/images/buffalo-lawn-care-hero.webp'
+  '/images/buffalo-lawn-care-hero.avif'
 const CARD_IMG_BACK =
-  'https://images.unsplash.com/photo-1622122123829-e0490a288d04?q=80&w=900&auto=format&fit=crop'
+  'https://images.unsplash.com/photo-1622122123829-e0490a288d04?q=50&w=600&auto=format&fit=crop&fm=avif'
 const CARD_IMG_FRONT =
-  'https://images.unsplash.com/photo-1590820292118-e256c3ac2676?q=80&w=900&auto=format&fit=crop'
+  'https://images.unsplash.com/photo-1590820292118-e256c3ac2676?q=50&w=600&auto=format&fit=crop&fm=avif'
 
 export default function Hero() {
   return (
