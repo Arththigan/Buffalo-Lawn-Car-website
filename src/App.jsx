@@ -18,7 +18,7 @@ function App() {
   if (path === '/terms-and-conditions') return <TermsConditions />
 
   return (
-    <div className="min-h-screen bg-cream">
+    <main className="min-h-screen bg-cream">
       <Hero />
       <Services />
       <Process />
@@ -29,7 +29,7 @@ function App() {
       <CTA />
       <Contact />
       <Footer />
-    </div>
+    </main>
   )
 }
 

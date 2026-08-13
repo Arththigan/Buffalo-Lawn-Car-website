@@ -14,14 +14,14 @@ const stats = [
 ]
 
 const IMG =
-  'https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=1200&auto=format&fit=crop'
+  'https://images.unsplash.com/photo-1558904541-efa843a96f01?q=65&w=800&auto=format&fit=crop&fm=webp'
 
 export default function WhyUs() {
   return (
     <section id="why-us" className="px-3 py-16 sm:px-4 lg:px-6">
       <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2 lg:items-center">
         <div className="relative overflow-hidden rounded-[28px] shadow-sm ring-1 ring-brand-900/10">
-          <img src={IMG} alt="Lush green lawn maintained by Buffalo Lawn Care" className="h-80 w-full object-cover sm:h-96" />
+          <img src={IMG} alt="Lush green lawn maintained by Buffalo Lawn Care" loading="lazy" decoding="async" className="h-80 w-full object-cover sm:h-96" />
           <div className="absolute bottom-4 left-4 right-4 flex items-center gap-4 rounded-2xl bg-white/95 p-4 shadow-lg backdrop-blur sm:right-auto sm:min-w-[260px]">
             {stats.map((s) => (
               <div key={s.label} className="flex-1 text-center">

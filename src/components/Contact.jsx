@@ -32,6 +32,7 @@ export default function Contact() {
             data-layout-iframe-id="inline-nbKL6lXWss2EAlIIaPwG"
             data-form-id="nbKL6lXWss2EAlIIaPwG"
             title="Buffalo Lawn Car"
+            loading="lazy"
           />
         </div>
       </div>

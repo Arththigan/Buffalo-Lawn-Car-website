@@ -2,7 +2,7 @@ import Navbar from './Navbar'
 import { IconArrow, IconCalendar, IconFilter, IconRuler, IconSparkle, IconStar } from './icons'
 
 const HERO_IMG =
-  '/images/buffalo-lawn-care-hero.png'
+  '/images/buffalo-lawn-care-hero.webp'
 const CARD_IMG_BACK =
   'https://images.unsplash.com/photo-1622122123829-e0490a288d04?q=80&w=900&auto=format&fit=crop'
 const CARD_IMG_FRONT =
@@ -20,6 +20,10 @@ export default function Hero() {
             <img
               src={HERO_IMG}
               alt="Professional lawn care specialist mowing a freshly striped lawn"
+              width="1774"
+              height="887"
+              fetchPriority="high"
+              decoding="async"
               className="absolute inset-0 h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-cream via-cream/75 to-transparent" />
@@ -96,12 +100,14 @@ export default function Hero() {
 
             <div className="relative mt-5 flex-1">
               <div className="absolute inset-x-3 top-2 aspect-[4/5] -rotate-6 overflow-hidden rounded-3xl shadow-md">
-                <img src={CARD_IMG_BACK} alt="" className="h-full w-full object-cover" aria-hidden="true" />
+                <img src={CARD_IMG_BACK} alt="" loading="lazy" decoding="async" className="h-full w-full object-cover" aria-hidden="true" />
               </div>
               <div className="relative aspect-[4/5] translate-x-3 rotate-3 overflow-hidden rounded-3xl shadow-xl ring-1 ring-black/5">
                 <img
                   src={CARD_IMG_FRONT}
                   alt="Manicured backyard lawn after service"
+                  loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover"
                 />
                 <span className="absolute right-3 top-3 flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-bold text-brand-900 shadow">
@@ -116,15 +122,15 @@ export default function Hero() {
                 {Array.from({ length: 5 }).map((_, i) => (
                   <IconStar key={i} className="h-3.5 w-3.5" />
                 ))}
-                <span className="ml-1 text-xs font-semibold text-brand-800/60">4.9 (210 reviews)</span>
+                <span className="ml-1 text-xs font-semibold text-brand-800/80">4.9 (210 reviews)</span>
               </div>
-              <h3 className="font-display mt-2 text-2xl font-extrabold uppercase tracking-tight text-brand-900">
+              <h2 className="font-display mt-2 text-2xl font-extrabold uppercase tracking-tight text-brand-900">
                 Full Service
-              </h3>
+              </h2>
               <div className="mt-1 flex items-end justify-between">
-                <p className="text-sm font-medium text-brand-800/60">Weekly &middot; Front &amp; back yard</p>
+                <p className="text-sm font-medium text-brand-800/80">Weekly &middot; Front &amp; back yard</p>
                 <p className="text-lg font-extrabold text-brand-900">
-                  $120<span className="text-sm font-semibold text-brand-800/50">/mo</span>
+                  $120<span className="text-sm font-semibold text-brand-800/75">/mo</span>
                 </p>
               </div>
             </div>
