@@ -1,5 +1,6 @@
 import { site } from '../data/site'
-import { IconLeaf, IconMail, IconPhone, IconPin } from './icons'
+import { IconMail, IconPhone, IconPin } from './icons'
+import BrandLogo from './BrandLogo'
 
 export default function Footer() {
   return (
@@ -8,12 +9,7 @@ export default function Footer() {
         <div className="grid gap-10 px-6 py-12 sm:px-10 sm:py-14 lg:grid-cols-[1.2fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-2.5">
-              <span className="grid h-9 w-9 place-items-center rounded-full bg-brand-600 text-cream">
-                <IconLeaf className="h-5 w-5" />
-              </span>
-              <span className="font-display text-base font-extrabold tracking-[0.12em]">
-                BUFFALO LAWN CARE
-              </span>
+              <BrandLogo light />
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-cream/60">
               Professional lawn mowing, trimming and landscaping for homes across Clarence Center

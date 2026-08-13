@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { site } from '../data/site'
-import { IconLeaf, IconMenu, IconClose, IconPhone } from './icons'
+import { IconMenu, IconClose, IconPhone } from './icons'
+import BrandLogo from './BrandLogo'
 
 const links = [
   { label: 'Home', href: '/' },
@@ -19,12 +20,7 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-brand-900/10 bg-cream/95 shadow-sm backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8 sm:py-5">
         <a href="/" className="flex items-center gap-2.5 shrink-0">
-          <span className="grid h-9 w-9 place-items-center rounded-full bg-brand-600 text-cream">
-            <IconLeaf className="h-5 w-5" />
-          </span>
-          <span className="font-display text-[15px] font-extrabold tracking-[0.12em] text-brand-900 sm:text-base">
-            BUFFALO LAWN CARE
-          </span>
+          <BrandLogo />
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex">

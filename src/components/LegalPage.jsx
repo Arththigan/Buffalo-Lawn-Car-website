@@ -1,5 +1,6 @@
 import Footer from './Footer'
-import { IconArrow, IconLeaf } from './icons'
+import { IconArrow } from './icons'
+import BrandLogo from './BrandLogo'
 
 export default function LegalPage({ title, effectiveDate, updatedDate, children }) {
   return (
@@ -7,12 +8,7 @@ export default function LegalPage({ title, effectiveDate, updatedDate, children 
       <div className="mx-auto max-w-6xl overflow-hidden rounded-[28px] bg-gradient-to-br from-brand-50 via-cream to-brand-100 shadow-xl shadow-brand-900/5 ring-1 ring-brand-900/10 sm:rounded-[36px]">
         <div className="flex items-center justify-between px-5 py-4 sm:px-8 sm:py-5">
           <a href="/" className="flex shrink-0 items-center gap-2.5">
-            <span className="grid h-9 w-9 place-items-center rounded-full bg-brand-600 text-cream">
-              <IconLeaf className="h-5 w-5" />
-            </span>
-            <span className="font-display text-[15px] font-extrabold tracking-[0.12em] text-brand-900 sm:text-base">
-              BUFFALO LAWN CARE
-            </span>
+            <BrandLogo />
           </a>
           <a href="/" className="flex items-center gap-2 text-sm font-bold text-brand-700 transition hover:text-brand-900">
             <IconArrow direction="left" className="h-4 w-4" />
