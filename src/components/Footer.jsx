@@ -58,14 +58,14 @@ export default function Footer() {
             </p>
             <a
               href={site.phoneHref}
-              className="mt-4 inline-flex items-center justify-center rounded-full bg-brand-500 px-6 py-3 text-sm font-bold text-brand-900 transition hover:bg-brand-400"
+              className="mt-4 inline-flex items-center justify-center rounded-full bg-brand-200 px-6 py-3 text-sm font-bold text-brand-900 transition hover:bg-brand-300"
             >
               Call {site.phoneDisplay}
             </a>
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-3 border-t border-cream/10 px-6 py-5 text-xs text-cream/40 sm:flex-row sm:px-10">
+        <div className="flex flex-col items-center justify-between gap-3 border-t border-cream/10 px-6 py-5 text-xs text-cream/80 sm:flex-row sm:px-10">
           <p>&copy; {new Date().getFullYear()} {site.name}. All rights reserved.</p>
           <nav aria-label="Legal" className="flex items-center gap-5">
             <a href="/privacy-policy" className="transition hover:text-cream">Privacy Policy</a>

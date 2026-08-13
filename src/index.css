@@ -58,3 +58,25 @@ body {
 .legal-copy li + li { margin-top: 0.3rem; }
 .legal-copy a { color: var(--color-brand-600); font-weight: 700; text-decoration: underline; }
 .legal-copy strong { color: var(--color-brand-900); }
+
+/* Accessible contrast for recurring section labels and supporting copy. */
+.text-brand-500 {
+  color: var(--color-brand-700);
+}
+
+[class~="text-brand-800/70"] {
+  color: var(--color-brand-800);
+}
+
+[class~="text-brand-800/50"],
+[class~="text-brand-800/60"] {
+  color: color-mix(in srgb, var(--color-brand-800) 82%, transparent);
+}
+
+.text-brand-100 {
+  color: var(--color-brand-600);
+}
+
+[class~="text-cream/40"] {
+  color: color-mix(in srgb, var(--color-cream) 78%, transparent);
+}
