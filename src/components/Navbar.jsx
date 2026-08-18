@@ -12,11 +12,16 @@ const links = [
   { label: 'Contact', href: '/#contact', section: 'contact' },
 ]
 
-export default function Navbar() {
+export default function Navbar({ trackActiveSection = true }) {
   const [open, setOpen] = useState(false)
-  const [active, setActive] = useState('top')
+  const [active, setActive] = useState(trackActiveSection ? 'top' : null)
 
   useEffect(() => {
+    if (!trackActiveSection) {
+      setActive(null)
+      return undefined
+    }
+
     const updateActiveSection = () => {
       const marker = window.scrollY + 150
       let current = 'top'
@@ -39,7 +44,7 @@ export default function Navbar() {
     updateActiveSection()
     window.addEventListener('scroll', updateActiveSection, { passive: true })
     return () => window.removeEventListener('scroll', updateActiveSection)
-  }, [])
+  }, [trackActiveSection])
 
   return (
     <>
