@@ -4,12 +4,12 @@ import { IconMenu, IconClose, IconPhone } from './icons'
 import BrandLogo from './BrandLogo'
 
 const links = [
-  { label: 'Home', href: '#top', section: 'top' },
-  { label: 'Services', href: '#services', section: 'services' },
-  { label: 'Gallery', href: '#gallery', section: 'gallery' },
-  { label: 'Reviews', href: '#reviews', section: 'reviews' },
-  { label: 'FAQ', href: '#faq', section: 'faq' },
-  { label: 'Contact', href: '#contact', section: 'contact' },
+  { label: 'Home', href: '/#top', section: 'top' },
+  { label: 'Services', href: '/#services', section: 'services' },
+  { label: 'Gallery', href: '/#gallery', section: 'gallery' },
+  { label: 'Reviews', href: '/#reviews', section: 'reviews' },
+  { label: 'FAQ', href: '/#faq', section: 'faq' },
+  { label: 'Contact', href: '/#contact', section: 'contact' },
 ]
 
 export default function Navbar() {
@@ -20,10 +20,14 @@ export default function Navbar() {
     const updateActiveSection = () => {
       const marker = window.scrollY + 150
       let current = 'top'
+      let currentOffset = 0
 
       for (const link of links) {
         const section = document.getElementById(link.section)
-        if (section && section.offsetTop <= marker) current = link.section
+        if (section && section.offsetTop <= marker && section.offsetTop >= currentOffset) {
+          current = link.section
+          currentOffset = section.offsetTop
+        }
       }
 
       if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 8) {
